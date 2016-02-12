@@ -38,7 +38,7 @@
 
 /proc/log_game(text)
 	if (config.log_game)
-		game_log("GAME", [revert_ja(text)])
+		game_log("GAME", (revert_ja(text)))
 
 /proc/log_vote(text)
 	if (config.log_vote)
@@ -50,19 +50,19 @@
 
 /proc/log_say(text)
 	if (config.log_say)
-		game_log("SAY", [revert_ja(text)])
+		game_log("SAY", (revert_ja(text)))
 
 /proc/log_ooc(text)
 	if (config.log_ooc)
-		game_log("OOC", [revert_ja(text)])
+		game_log("OOC", (revert_ja(text)))
 
 /proc/log_whisper(text)
 	if (config.log_whisper)
-		game_log("WHISPER", [revert_ja(text)])
+		game_log("WHISPER", (revert_ja(text)))
 
 /proc/log_emote(text)
 	if (config.log_emote)
-		game_log("EMOTE", [revert_ja(text)])
+		game_log("EMOTE", (revert_ja(text)))
 
 /proc/log_attack(text)
 	if (config.log_attack)
@@ -70,7 +70,7 @@
 
 /proc/log_adminsay(text)
 	if (config.log_adminchat)
-		game_log("ADMINSAY", [revert_ja(text)])
+		game_log("ADMINSAY", (revert_ja(text)))
 
 /proc/log_adminwarn(text)
 	if (config.log_adminwarn)
@@ -78,7 +78,7 @@
 
 /proc/log_pda(text)
 	if (config.log_pda)
-		game_log("PDA", [revert_ja(text)])
+		game_log("PDA", (revert_ja(text)))
 
 /proc/log_to_dd(text)
 	world.log << text //this comes before the config check because it can't possibly runtime
